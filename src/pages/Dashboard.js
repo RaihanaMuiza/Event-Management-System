@@ -15,12 +15,16 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { fetchEvents } from "../components/eventSlice.js";
 import ClearIcon from "@mui/icons-material/Clear";
+import Header from "../components/Header";
+import { Drawer, List, ListItem, ListItemText } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.events);
   const [hostFilter, setHostFilter] = useState("");
   const [dateFilter, setDateFilter] = useState("");
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     dispatch(fetchEvents());
@@ -41,6 +45,70 @@ const Dashboard = () => {
     <Box
       sx={{ p: 3, backgroundColor: "#000", minHeight: "100vh", color: "#fff" }}
     >
+      <Header onMenuClick={() => setDrawerOpen(true)} />
+
+      {/* pass empty handler for now if no menu needed */}
+      <Typography
+        variant="h4"
+        sx={{
+          textAlign: "center",
+          color: "#fff",
+          mt: 8, // margin top to push below transparent header
+          mb: 4,
+          fontWeight: "bold",
+        }}
+      >
+        Upcoming Events
+      </Typography>
+
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        PaperProps={{
+          sx: {
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.85)",
+            color: "#fff",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          },
+        }}
+      >
+        <IconButton
+          onClick={() => setDrawerOpen(false)}
+          sx={{ position: "absolute", top: 20, right: 20, color: "#fff" }}
+        >
+          <CloseIcon />
+        </IconButton>
+
+        <List>
+          {[
+            { label: "Upcoming Events", path: "/dashboard" },
+            { label: "Event Details", path: "/event-details" },
+            { label: "User Profile", path: "/profile" },
+          ].map((item) => (
+            <ListItem
+              button
+              key={item.label}
+              onClick={() => {
+                window.location.href = item.path;
+                setDrawerOpen(false);
+              }}
+              sx={{ justifyContent: "center" }}
+            >
+              <ListItemText
+                primary={item.label}
+                primaryTypographyProps={{ fontSize: 24, align: "center" }}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+
       {/* Filter Section (Top Right) */}
       <Box
         sx={{
@@ -132,7 +200,6 @@ const Dashboard = () => {
           )}
         />
       </Box>
-
       {/* Events Section */}
       {loading ? (
         <Box textAlign="center">
