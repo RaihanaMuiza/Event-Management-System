@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchEvents } from "../components/eventSlice.js";
+import ClearIcon from "@mui/icons-material/Clear";
+import Header from "../components/Header";
 import {
   Box,
   Typography,
@@ -12,19 +16,12 @@ import {
   InputAdornment,
   IconButton,
 } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchEvents } from "../components/eventSlice.js";
-import ClearIcon from "@mui/icons-material/Clear";
-import Header from "../components/Header";
-import { Drawer, List, ListItem, ListItemText } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.events);
   const [hostFilter, setHostFilter] = useState("");
   const [dateFilter, setDateFilter] = useState("");
-  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     dispatch(fetchEvents());
@@ -45,71 +42,22 @@ const Dashboard = () => {
     <Box
       sx={{ p: 3, backgroundColor: "#000", minHeight: "100vh", color: "#fff" }}
     >
-      <Header onMenuClick={() => setDrawerOpen(true)} />
+      <Header />
 
-      {/* pass empty handler for now if no menu needed */}
       <Typography
-        variant="h4"
+        variant="h3"
         sx={{
           textAlign: "center",
           color: "#fff",
-          mt: 8, // margin top to push below transparent header
+          mt: 8,
           mb: 4,
-          fontWeight: "bold",
+          fontWeight: "600",
+          fontFamily: "'Montserrat', sans-serif",
         }}
       >
-        Upcoming Events
+        UPCOMING EVENTS
       </Typography>
 
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-        PaperProps={{
-          sx: {
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.85)",
-            color: "#fff",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-        }}
-      >
-        <IconButton
-          onClick={() => setDrawerOpen(false)}
-          sx={{ position: "absolute", top: 20, right: 20, color: "#fff" }}
-        >
-          <CloseIcon />
-        </IconButton>
-
-        <List>
-          {[
-            { label: "Upcoming Events", path: "/dashboard" },
-            { label: "Event Details", path: "/event-details" },
-            { label: "User Profile", path: "/profile" },
-          ].map((item) => (
-            <ListItem
-              button
-              key={item.label}
-              onClick={() => {
-                window.location.href = item.path;
-                setDrawerOpen(false);
-              }}
-              sx={{ justifyContent: "center" }}
-            >
-              <ListItemText
-                primary={item.label}
-                primaryTypographyProps={{ fontSize: 24, align: "center" }}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
-
-      {/* Filter Section (Top Right) */}
       <Box
         sx={{
           display: "flex",
@@ -117,7 +65,7 @@ const Dashboard = () => {
           gap: 2,
           mb: 3,
           paddingX: "5vw",
-          flexWrap: "wrap", // allows stacking when needed
+          flexWrap: "wrap",
           "@media (max-width: 480px)": {
             flexDirection: "column",
             alignItems: "flex-end",
@@ -200,7 +148,7 @@ const Dashboard = () => {
           )}
         />
       </Box>
-      {/* Events Section */}
+
       {loading ? (
         <Box textAlign="center">
           <CircularProgress sx={{ color: "#fff" }} />
@@ -213,7 +161,7 @@ const Dashboard = () => {
           spacing={6}
           justifyContent="center"
           sx={{
-            paddingX: "5vw", // 5vw side padding
+            paddingX: "5vw",
             margin: "0 auto",
           }}
         >
@@ -228,7 +176,6 @@ const Dashboard = () => {
               <Card
                 sx={{
                   width: "35vw", // fill the Grid column
-                  //maxWidth: "35vw", // make all cards equal width
                   height: "100%",
                   display: "flex",
                   flexDirection: "column",
@@ -247,15 +194,23 @@ const Dashboard = () => {
                   alt={event.name}
                   loading="lazy"
                 />
-                <CardContent sx={{ backgroundColor: "#fff", color: "#000" }}>
-                  <Typography>
-                    <strong>Event:</strong> {event.name}
+                <CardContent
+                  sx={{
+                    backgroundColor: "#fff",
+                    color: "#000",
+                  }}
+                >
+                  <Typography sx={{
+                    fontFamily: "'Montserrat', sans-serif"}}>
+                    <strong>EVENT:</strong> {event.name}
                   </Typography>
-                  <Typography>
-                    <strong>Date:</strong> {event.date}
+                  <Typography sx={{
+                    fontFamily: "'Montserrat', sans-serif"}}>
+                    <strong>DATE:</strong> {event.date}
                   </Typography>
-                  <Typography>
-                    <strong>Host:</strong> {event.host}
+                  <Typography sx={{
+                    fontFamily: "'Montserrat', sans-serif"}}>
+                    <strong>HOST:</strong> {event.host}
                   </Typography>
                 </CardContent>
               </Card>

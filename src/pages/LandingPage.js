@@ -1,25 +1,9 @@
-import React, { useState } from "react";
-import {
-  Box,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import React from "react";
+import {Box} from "@mui/material";
 import Header from "../components/Header";
 import LandingPageImage from "../assets/landingPgImg.jpg";
 
 const LandingPage = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const menuItems = [
-    { label: "Upcoming Events", path: "/dashboard" },
-    { label: "Event Details", path: "/event-details" },
-    { label: "User Profile", path: "/profile" },
-  ];
-
   return (
     <Box
       sx={{
@@ -33,7 +17,7 @@ const LandingPage = () => {
         color: "#fff",
       }}
     >
-      <Header onMenuClick={() => setDrawerOpen(true)} />
+      <Header />
 
       <Box
         sx={{
@@ -76,50 +60,6 @@ const LandingPage = () => {
           </Box>
         </Box>
       </Box>
-
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-        PaperProps={{
-          sx: {
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.75)",
-            color: "#fff",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          },
-        }}
-      >
-        <IconButton
-          onClick={() => setDrawerOpen(false)}
-          sx={{ position: "absolute", top: 20, right: 20, color: "#fff" }}
-        >
-          <CloseIcon />
-        </IconButton>
-
-        <List>
-          {menuItems.map((item) => (
-            <ListItem
-              button
-              key={item.label}
-              onClick={() => {
-                setDrawerOpen(false);
-                window.location.href = item.path;
-              }}
-              sx={{ justifyContent: "center" }}
-            >
-              <ListItemText
-                primary={item.label}
-                primaryTypographyProps={{ fontSize: 24, align: "center" }}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
     </Box>
   );
 };
