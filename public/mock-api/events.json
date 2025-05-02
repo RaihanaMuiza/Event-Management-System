@@ -1,0 +1,18 @@
+[
+    { "name": "Music Night", "date": "2025-06-15", "host": "John Doe", "image": "" },
+    { "name": "Tech Talk", "date": "2025-06-20", "host": "Alice", "image": "" },
+    { "name": "Art Exhibition", "date": "2025-06-25", "host": "Bob", "image": "" },
+    { "name": "Food Festival", "date": "2025-07-01", "host": "Charlie", "image": "" },
+    { "name": "Book Fair", "date": "2025-07-05", "host": "Diana", "image": "" },
+    { "name": "Sports Day", "date": "2025-07-10", "host": "Eve", "image": "" },
+    { "name": "Movie Night", "date": "2025-07-15", "host": "Frank", "image": "" },
+    { "name": "Charity Run", "date": "2025-07-20", "host": "Grace", "image": "" },
+    { "name": "Photography Workshop", "date": "2025-07-25", "host": "Hank", "image": "" },
+    { "name": "Dance Party", "date": "2025-07-30", "host": "Ivy", "image": "" },
+    { "name": "Cooking Class", "date": "2025-08-05", "host": "Jack", "image": "" },
+    { "name": "Yoga Retreat", "date": "2025-08-10", "host": "Kathy", "image": "" },
+    { "name": "Science Fair", "date": "2025-08-15", "host": "Leo", "image": "" },
+    { "name": "Fashion Show", "date": "2025-08-20", "host": "Mia", "image": "" },
+    { "name": "Travel Expo", "date": "2025-08-25", "host": "Nina", "image": "" }    
+  ]
+  

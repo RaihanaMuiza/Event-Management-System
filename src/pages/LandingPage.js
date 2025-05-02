@@ -14,7 +14,11 @@ import LandingPageImage from "../assets/landingPgImg.jpg";
 const LandingPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const menuItems = ["Upcoming Events", "Event Details", "User Profile"];
+  const menuItems = [
+    { label: "Upcoming Events", path: "/dashboard" },
+    { label: "Event Details", path: "/event-details" },
+    { label: "User Profile", path: "/profile" },
+  ];
 
   return (
     <Box
@@ -38,7 +42,7 @@ const LandingPage = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.4)", 
+          backgroundColor: "rgba(0, 0, 0, 0.4)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -99,9 +103,17 @@ const LandingPage = () => {
 
         <List>
           {menuItems.map((item) => (
-            <ListItem button key={item} sx={{ justifyContent: "center" }}>
+            <ListItem
+              button
+              key={item.label}
+              onClick={() => {
+                setDrawerOpen(false);
+                window.location.href = item.path;
+              }}
+              sx={{ justifyContent: "center" }}
+            >
               <ListItemText
-                primary={item}
+                primary={item.label}
                 primaryTypographyProps={{ fontSize: 24, align: "center" }}
               />
             </ListItem>
