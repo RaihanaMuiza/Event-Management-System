@@ -1,4 +1,3 @@
-// src/pages/CreateEvent.js
 import React, { useState } from "react";
 import {
   Box,
@@ -56,7 +55,7 @@ const CreateEvent = () => {
       return;
     }
     try {
-      await axios.post("/mock-api/eventDetails.json", formData); // mock write simulation
+      await axios.post("/mock-api/eventDetails.json", formData); 
       setSuccessOpen(true);
       setTimeout(() => navigate("/event-details"), 2000);
     } catch (err) {

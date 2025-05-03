@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard'; 
 import EventDetails from "./pages/EventDetails";
 import CreateEvent from "./pages/CreateEvent";
+import EditEvent from "./pages/EditEvent";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/event-details" element={<EventDetails />} />
         <Route path="/create-event" element={<CreateEvent />} />
+        <Route path="/edit-event/:id" element={<EditEvent />} />
+
       </Routes>
     </Router>
   );

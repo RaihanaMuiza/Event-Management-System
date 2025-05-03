@@ -20,9 +20,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchEventDetails } from "../components/eventDetailsSlice"; 
+import { useNavigate } from "react-router-dom";
+
 
 const EventDetails = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { data } = useSelector((state) => state.eventDetails); 
   const [expandedCard, setExpandedCard] = useState(null);
   const [searchText, setSearchText] = useState("");
@@ -180,7 +183,7 @@ const EventDetails = () => {
                     }}
                   >
                     <Tooltip title="Edit">
-                      <IconButton>
+                      <IconButton onClick={() => navigate(`/edit-event/${event.id}`)}>
                         <EditIcon sx={{ color: "#555" }} />
                       </IconButton>
                     </Tooltip>
