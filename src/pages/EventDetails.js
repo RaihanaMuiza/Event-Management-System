@@ -19,16 +19,16 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import SearchIcon from "@mui/icons-material/Search";
 import AddIcon from "@mui/icons-material/Add";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchEventDetails } from "../components/eventDetailsSlice"; // 1️⃣
+import { fetchEventDetails } from "../components/eventDetailsSlice"; 
 
 const EventDetails = () => {
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.eventDetails); // 2️⃣
+  const { data } = useSelector((state) => state.eventDetails); 
   const [expandedCard, setExpandedCard] = useState(null);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    dispatch(fetchEventDetails()); // 3️⃣
+    dispatch(fetchEventDetails()); 
   }, [dispatch]);
 
   const filteredEvents = data.filter((event) =>
@@ -205,10 +205,10 @@ const EventDetails = () => {
             right: 24,
             backgroundColor: "#fff",
             color: "#000",
-            borderRadius: "10px", // Slightly rounded square
+            borderRadius: "10px", 
             width: 56,
             height: 56,
-            minHeight: "unset", // Prevents it from forcing circular height
+            minHeight: "unset", 
             boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
             "&:hover": {
               backgroundColor: "#eee",
