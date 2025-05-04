@@ -1,5 +1,5 @@
 import React from "react";
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
 import Header from "../components/Header";
 import LandingPageImage from "../assets/landingPgImg.jpg";
 
@@ -39,24 +39,26 @@ const LandingPage = () => {
         <Box>
           <Box
             sx={{
-              fontFamily: `"Playfair Display", serif`,
+              fontFamily: `'Playfair Display', serif`,
               fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
               fontWeight: "bold",
               color: "#fff",
               textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
             }}
           >
-            Dream
+            DREAM EVENT MANAGEMENT
           </Box>
+
           <Box
             sx={{
-              fontFamily: `"Playfair Display", serif`,
-              fontSize: { xs: "1.5rem", sm: "2.2rem", md: "2.8rem" },
-              color: "#fff",
+              fontFamily: `'Montserrat', sans-serif`,
+              fontSize: { xs: "1rem", sm: "1.3rem", md: "1.6rem" },
+              color: "#ddd",
+              mt: 2,
               textShadow: "1px 1px 6px rgba(0,0,0,0.6)",
             }}
           >
-            Event Management
+            Where every moment becomes a memory
           </Box>
         </Box>
       </Box>

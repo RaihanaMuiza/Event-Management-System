@@ -12,7 +12,11 @@ import { fetchAttendingEvents } from "../components/attendingSlice";
 
 const UserProfile = () => {
   const dispatch = useDispatch();
-  const { data: users, loading, error } = useSelector((state) => state.attending);
+  const {
+    data: users,
+    loading,
+    error,
+  } = useSelector((state) => state.attending);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -26,7 +30,9 @@ const UserProfile = () => {
   );
 
   return (
-    <Box sx={{ backgroundColor: "#000", minHeight: "100vh", color: "#fff", p: 3 }}>
+    <Box
+      sx={{ backgroundColor: "#000", minHeight: "100vh", color: "#fff", p: 3 }}
+    >
       <Header />
 
       <Typography
@@ -74,10 +80,23 @@ const UserProfile = () => {
             >
               <Avatar>{user.name?.charAt(0)}</Avatar>
               <Box>
-                <Typography variant="h6" fontWeight="bold">
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  sx={{
+                    fontWeight: "600",
+                    fontFamily: "'Montserrat', sans-serif",
+                  }}
+                >
                   {user.name}
                 </Typography>
-                <Typography variant="body2" sx={{ fontSize: "0.85rem", color: "#aaa" }}>{user.email} | Attending {user.events.length} {user.events.length === 1 ? "event" : "events"}</Typography> 
+                <Typography
+                  variant="body2"
+                  sx={{ fontSize: "0.85rem", color: "#aaa" }}
+                >
+                  {user.email} | Attending {user.events.length}{" "}
+                  {user.events.length === 1 ? "event" : "events"}
+                </Typography>
                 {/* <Typography variant="body2" sx={{ fontSize: "0.85rem", color: "#aaa" }}>
                   Attending {user.events.length} {user.events.length === 1 ? "event" : "events"}
                 </Typography> */}
@@ -109,10 +128,41 @@ const UserProfile = () => {
                     boxShadow: 2,
                   }}
                 >
-                  <Typography fontWeight="bold">{event.name}</Typography>
-                  <Typography fontSize="0.9rem">Date: {event.date}</Typography>
-                  <Typography fontSize="0.9rem">Location: {event.location}</Typography>
-                  <Typography fontSize="0.9rem">RSVP: {event.rsvp}</Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontFamily: "'Montserrat', sans-serif",
+                    }}
+                  >
+                    {event.name}
+                  </Typography>
+                  <Typography
+                    fontSize="0.9rem"
+                    sx={{
+                      fontWeight: "400",
+                      fontFamily: "'Montserrat', sans-serif",
+                    }}
+                  >
+                    Date: {event.date}
+                  </Typography>
+                  <Typography
+                    fontSize="0.9rem"
+                    sx={{
+                      fontWeight: "400",
+                      fontFamily: "'Montserrat', sans-serif",
+                    }}
+                  >
+                    Location: {event.location}
+                  </Typography>
+                  <Typography
+                    fontSize="0.9rem"
+                    sx={{
+                      fontWeight: "400",
+                      fontFamily: "'Montserrat', sans-serif",
+                    }}
+                  >
+                    RSVP: {event.rsvp}
+                  </Typography>
                 </Box>
               ))}
             </Box>

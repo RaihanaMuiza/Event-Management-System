@@ -1,17 +1,86 @@
 [
-    { "name": "MUSIC NIGHT", "date": "2025-06-15", "host": "John Doe", "image": "/assets/musicNight.jpg" },
-    { "name": "TECH TALK", "date": "2025-06-20", "host": "Alice", "image": "/assets/techTalk.jpg" },
-    { "name": "ART EXHIBITION", "date": "2025-06-25", "host": "Bob", "image": "/assets/artExhibition.jpg" },
-    { "name": "FOOD FESTIVAL", "date": "2025-07-01", "host": "Charlie", "image": "/assets/foodFestival.jpg" },
-    { "name": "BOOK FAIR", "date": "2025-07-05", "host": "Diana", "image": "/assets/bookFair.jpg" },
-    { "name": "MOVIE NIGHT", "date": "2025-07-15", "host": "Frank", "image": "/assets/movieNight.jpg" },
-    { "name": "CHARITY RUN", "date": "2025-07-20", "host": "Grace", "image": "/assets/charityRun.jpg" },
-    { "name": "PHOTOGRAPHY WORKSHOP", "date": "2025-07-25", "host": "Hank", "image": "/assets/photgraphyWorkshop.jpg" },
-    { "name": "DANCE PARTY", "date": "2025-07-30", "host": "Ivy", "image": "/assets/danceParty.jpg" },
-    { "name": "COOKING CLASS", "date": "2025-08-05", "host": "Jack", "image": "/assets/cookingWorkshop.jpg" },
-    { "name": "YOGA RETREAT", "date": "2025-08-10", "host": "Kathy", "image": "/assets/yogaRetreat.jpg" },
-    { "name": "SCIENCE FAIR", "date": "2025-08-15", "host": "Leo", "image": "/assets/scienceFair.jpg" },
-    { "name": "FASHION SHOW", "date": "2025-08-20", "host": "Mia", "image": "/assets/fashionShow.jpg" },
-    { "name": "TRAVEL EXPO", "date": "2025-08-25", "host": "Nina", "image": "/assets/travelExpo.jpg" }    
-  ]
-  
+  {
+    "name": "MUSIC NIGHT",
+    "date": "2025-06-15",
+    "host": "John Doe",
+    "image": "/assets/musicNight.jpg"
+  },
+  {
+    "name": "TECH TALK",
+    "date": "2025-06-20",
+    "host": "Alice",
+    "image": "/assets/techTalk.jpg"
+  },
+  {
+    "name": "ART EXHIBITION",
+    "date": "2025-06-25",
+    "host": "Bob",
+    "image": "/assets/artExhibition.jpg"
+  },
+  {
+    "name": "FOOD FESTIVAL",
+    "date": "2025-07-01",
+    "host": "Charlie",
+    "image": "/assets/foodFestival.jpg"
+  },
+  {
+    "name": "BOOK FAIR",
+    "date": "2025-07-05",
+    "host": "Diana",
+    "image": "/assets/bookFair.jpg"
+  },
+  {
+    "name": "MOVIE NIGHT",
+    "date": "2025-07-15",
+    "host": "Frank",
+    "image": "/assets/movieNight.jpg"
+  },
+  {
+    "name": "CHARITY RUN",
+    "date": "2025-07-20",
+    "host": "Grace",
+    "image": "/assets/charityRun.jpg"
+  },
+  {
+    "name": "PHOTOGRAPHY WORKSHOP",
+    "date": "2025-07-25",
+    "host": "Hank",
+    "image": "/assets/photgraphyWorkshop.jpg"
+  },
+  {
+    "name": "DANCE PARTY",
+    "date": "2025-07-30",
+    "host": "Ivy",
+    "image": "/assets/danceParty.jpg"
+  },
+  {
+    "name": "COOKING CLASS",
+    "date": "2025-08-05",
+    "host": "Jack",
+    "image": "/assets/cookingWorkshop.jpg"
+  },
+  {
+    "name": "YOGA RETREAT",
+    "date": "2025-08-10",
+    "host": "Kathy",
+    "image": "/assets/yogaRetreat.jpg"
+  },
+  {
+    "name": "SCIENCE FAIR",
+    "date": "2025-08-15",
+    "host": "Leo",
+    "image": "/assets/scienceFair.jpg"
+  },
+  {
+    "name": "FASHION SHOW",
+    "date": "2025-08-20",
+    "host": "Mia",
+    "image": "/assets/fashionShow.jpg"
+  },
+  {
+    "name": "TRAVEL EXPO",
+    "date": "2025-08-25",
+    "host": "Nina",
+    "image": "/assets/travelExpo.jpg"
+  }
+]
