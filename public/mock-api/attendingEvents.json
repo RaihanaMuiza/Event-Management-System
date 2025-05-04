@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "user": "muiza@example.com",
+      "events": [
+        {
+          "id": 101,
+          "name": "Tech Meetup 2025",
+          "date": "2025-06-15",
+          "location": "Colombo",
+          "rsvp": "Yes"
+        },
+        {
+          "id": 102,
+          "name": "Vue.js Workshop",
+          "date": "2025-06-20",
+          "location": "Online",
+          "rsvp": "No"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "user": "sana@example.com",
+      "events": [
+        {
+          "id": 103,
+          "name": "React Conference",
+          "date": "2025-07-01",
+          "location": "Kandy",
+          "rsvp": "Yes"
+        }
+      ]
+    },
+    {
+        "id": 3,
+        "user": "tod@example.com",
+        "events": [
+          {
+            "id": 101,
+            "name": "Tech Meetup 2025",
+            "date": "2025-06-15",
+            "location": "Colombo",
+            "rsvp": "Yes"
+          },
+          {
+            "id": 102,
+            "name": "Vue.js Workshop",
+            "date": "2025-06-20",
+            "location": "Online",
+            "rsvp": "Yes"
+          },
+          {
+            "id": 102,
+            "name": "Charity Run",
+            "date": "2025-07-13",
+            "location": "Main Road",
+            "rsvp": "No"
+          }
+        ]
+      }
+  ]
+  

@@ -16,9 +16,9 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Upcoming Events', path: '/dashboard' },
+    { label: 'Dashboard (Upcoming Events)', path: '/dashboard' },
     { label: 'Event Details', path: '/event-details' },
-    { label: 'User Profile', path: '/profile' },
+    { label: 'User Profile', path: '/user-profile' },
   ];
 
   const handleNavigate = (path) => {
