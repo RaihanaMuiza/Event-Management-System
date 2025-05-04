@@ -1,7 +1,8 @@
 [
     {
       "id": 1,
-      "user": "muiza@example.com",
+      "name": "Raihana Muiza",
+      "email": "muiza@example.com",
       "events": [
         {
           "id": 101,
@@ -21,7 +22,8 @@
     },
     {
       "id": 2,
-      "user": "sana@example.com",
+      "name": "Sana Khan",
+      "email": "sana@example.com",
       "events": [
         {
           "id": 103,
@@ -34,7 +36,8 @@
     },
     {
         "id": 3,
-        "user": "tod@example.com",
+        "name": "Toddy Smith",
+        "email": "tod@example.com",
         "events": [
           {
             "id": 101,
